@@ -9,20 +9,20 @@ public class Main {
 switch (month){
     case "Zima":
         x = Season.WINTER;
-        System.out.println(Season.WINTER.toString());
+        System.out.println(x.WINTER.toString());
         System.out.println();
         break;
     case "Wiosna":
         x = Season.SPRING;
-        System.out.println(Season.SPRING.toString());
+        System.out.println(x.SPRING.toString());
         break;
     case "Lato":
         x = Season.SUMMER;
-        System.out.println(Season.SUMMER.toString());
+        System.out.println(x.SUMMER.toString());
         break;
     case "Jesień":
         x = Season.AUTUM;
-        System.out.println(Season.AUTUM.toString());
+        System.out.println(x.AUTUM.toString());
         break;
 }
 
