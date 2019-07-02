@@ -6,6 +6,10 @@ public enum Season {
     AUTUM("Jesień", new String[] { "Wrzesień", "Październik", "Listopad"}),
     WINTER("Zima", new String[] {"Grudzień", "Styczeń", "Luty"});
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Season{" +
@@ -21,4 +25,14 @@ public enum Season {
         this.name = name;
         this.months = months;
     }
+
+    public  static Season fromName(String name){
+        Season[] values = values();
+        for(Season season:values){
+            if(season.getName().equals(name))
+                return season;
+        }
+        return  null;
+    }
+
 }

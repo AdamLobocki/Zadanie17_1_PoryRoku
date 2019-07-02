@@ -7,15 +7,9 @@ public class Main {
         System.out.println("Podaj porę roku");
         String month = scanner.nextLine();
 
-        if (month.equals("Zima")) {
-            x = Season.WINTER;
-        } else if (month.equals("Wiosna")) {
-            x = Season.SPRING;
-        } else if (month.equals("Lato")) {
-            x = Season.SUMMER;
-        } else if (month.equals("Jesień")) {
-            x = Season.AUTUM;
-        }
-        System.out.println(x.toString());
+        Season season = Season.fromName(month);
+        System.out.println(season.toString());
+
+
     }
 }
