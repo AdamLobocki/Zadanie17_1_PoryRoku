@@ -2,30 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Season x;
+        Season x = null;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj porę roku");
         String month = scanner.nextLine();
-switch (month){
-    case "Zima":
-        x = Season.WINTER;
-        System.out.println(x.WINTER.toString());
-        System.out.println();
-        break;
-    case "Wiosna":
-        x = Season.SPRING;
-        System.out.println(x.SPRING.toString());
-        break;
-    case "Lato":
-        x = Season.SUMMER;
-        System.out.println(x.SUMMER.toString());
-        break;
-    case "Jesień":
-        x = Season.AUTUM;
-        System.out.println(x.AUTUM.toString());
-        break;
-}
 
-
+        if (month.equals("Zima")) {
+            x = Season.WINTER;
+        } else if (month.equals("Wiosna")) {
+            x = Season.SPRING;
+        } else if (month.equals("Lato")) {
+            x = Season.SUMMER;
+        } else if (month.equals("Jesień")) {
+            x = Season.AUTUM;
+        }
+        System.out.println(x.toString());
     }
 }
